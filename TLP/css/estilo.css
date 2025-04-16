@@ -1,0 +1,89 @@
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.juego {
+    flex: 1 1 30%;
+    background-color: #c3daf0;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+  
+.juego:hover {
+    background-color: #7ab8e0;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    transform: scale(1.02);
+}
+  
+.juego img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    max-height: 200px;
+}
+.img-overlay-container{
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+  
+.img-overlay-container img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1rem;
+}
+  
+.img-overlay-text{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6); /* fondo semitransparente */
+    color: #fff;
+    padding: 0.5rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 0.9rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+  
+.img-overlay-container:hover .img-overlay-text{
+    opacity: 1;
+}
+.linea-de-tiempo{
+    position: relative;
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 800px;
+    border-left: 3px solid #003087;
+}
+.linea-de-tiempo-item{
+    position: relative;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.linea-de-tiempo-item::before{
+    content: '';
+    position: absolute;
+    left: -11px;
+    top: 1rem;
+    width: 20px;
+    height: 20px;
+    background: #003087;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
